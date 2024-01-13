@@ -1,0 +1,12 @@
+
+.navbar-brand img {
+    width: 5vw;
+    height: 5vw;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 60px;
+    max-height: 60px;
+}
+.no-border {
+    border: none;
+}
