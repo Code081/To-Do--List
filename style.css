@@ -149,3 +149,14 @@ ul li {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.background-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.background-option {
+    flex: 1 0 auto;
+    margin: 5px;
+}
