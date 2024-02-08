@@ -1,16 +1,66 @@
 body {
     font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
     text-align: center;
     color: #333;
 }
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#date-time-container {
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+#date, #time {
+    
+    font-size: 4em; /* Enlarge the font */
+    text-align: center;
+}
+
+#time {
+    animation: fade-in 1s ease-in-out infinite alternate;
+}
+#task{
+    display: flex;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+    height: 100vh;
+    padding-top: 10%;
+
+}
+#task-list{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 400px;
+
+}
 
 form {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This makes the container take up the full height of the viewport */
+    width: 100vh;
+    z-index: 0;
 }
 
 input[type="text"] {
@@ -19,6 +69,7 @@ input[type="text"] {
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 40px; /* Set a specific height */
 }
 
 button[type="submit"] {
@@ -29,6 +80,9 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100px;
+    
+    height: 40px;
 }
 
 button[type="submit"]:hover {
@@ -147,7 +201,7 @@ ul li {
 
 .background-option[data-type="image"] {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
 }
 
 .background-options {

@@ -1,4 +1,4 @@
-/* FILEPATH: /home/crash/WebD - Class/To-Do--List/login.css */
+
 .card {
     padding: 20px;
     margin: 0 auto;
@@ -53,7 +53,7 @@
     .card button {
         padding: 0.4em 0.8em;
     }
-}}
+}
 
 .form-container {
     display: flex;

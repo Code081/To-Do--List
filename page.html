@@ -1,100 +1,172 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./navigation.css">
-    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./navigation.css" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="./images/icon.png" alt="icon">
-            To-Do List
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item no-border">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item dropdown no-border">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Preferences
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a id="open-modal" class="dropdown-item " href="#">Backgrounds</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="darkSwitch">
-                        <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#">
+        <img src="./images/icon.png" alt="icon" />
+        To-Do List
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item no-border">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item dropdown no-border">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Preferences
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a id="open-modal" class="dropdown-item" href="#">Backgrounds</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="custom-control custom-switch">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="darkSwitch"
+              />
+              <label class="custom-control-label" for="darkSwitch"
+                >Dark Mode</label
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-
-
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal">&times;</span>
-            <h2>Select a Background</h2>
-            <div class="background-options">
-                <h3>Solid Colors</h3>
-                <button class="background-option" data-type="color" data-value="lightblue"></button>
-                <button class="background-option" data-type="color" data-value="lightgreen"></button>
-                <button class="background-option" data-type="color" data-value="lightpink"></button>
-                <button class="background-option" data-type="color" data-value="lightyellow"></button>
-                <h3>Gradients</h3>
-                <button class="background-option" data-type="gradient"
-                    data-value="linear-gradient(to right, red, orange)"></button>
-                <button class="background-option" data-type="gradient"
-                    data-value="linear-gradient(to right, blue, violet)"></button>
-                <button class="background-option" data-type="gradient"
-                    data-value="linear-gradient(to right, green, yellow)"></button>
-                <button class="background-option" data-type="gradient"
-                    data-value="linear-gradient(to right, pink, purple)"></button>
-                <h3>Unsplash Images</h3>
-                <button class="background-option" data-type="image"
-                    data-value="https://source.unsplash.com/random/1"></button>
-                <button class="background-option" data-type="image"
-                    data-value="https://source.unsplash.com/random/2"></button>
-                <button class="background-option" data-type="image"
-                    data-value="https://source.unsplash.com/random/3"></button>
-                <button class="background-option" data-type="image"
-                    data-value="https://source.unsplash.com/random/4"></button>
-                <button class="background-option" data-type="image"
-                    data-value="https://source.unsplash.com/random/5"></button>
-            </div>
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <h2>Select a Background</h2>
+        <div class="background-options">
+          <h3>Solid Colors</h3>
+          <button
+            class="background-option"
+            data-type="color"
+            data-value="lightblue"
+          ></button>
+          <button
+            class="background-option"
+            data-type="color"
+            data-value="lightgreen"
+          ></button>
+          <button
+            class="background-option"
+            data-type="color"
+            data-value="lightpink"
+          ></button>
+          <button
+            class="background-option"
+            data-type="color"
+            data-value="lightyellow"
+          ></button>
+          <h3>Gradients</h3>
+          <button
+            class="background-option"
+            data-type="gradient"
+            data-value="linear-gradient(to right, red, orange)"
+          ></button>
+          <button
+            class="background-option"
+            data-type="gradient"
+            data-value="linear-gradient(to right, blue, violet)"
+          ></button>
+          <button
+            class="background-option"
+            data-type="gradient"
+            data-value="linear-gradient(to right, green, yellow)"
+          ></button>
+          <button
+            class="background-option"
+            data-type="gradient"
+            data-value="linear-gradient(to right, pink, purple)"
+          ></button>
+          <h3>Unsplash Images</h3>
+          <div class="cover">
+            <button
+              class="background-option"
+              data-type="image"
+              data-value="https://source.unsplash.com/random/1"
+            ></button>
+            <button
+              class="background-option"
+              data-type="image"
+              data-value="https://source.unsplash.com/random/2"
+            ></button>
+            <button
+              class="background-option"
+              data-type="image"
+              data-value="https://source.unsplash.com/random/3"
+            ></button>
+            <button
+              class="background-option"
+              data-type="image"
+              data-value="https://source.unsplash.com/random/4"
+            ></button>
+            <button
+              class="background-option"
+              data-type="image"
+              data-value="https://source.unsplash.com/random/5"
+            ></button>
+          </div>
         </div>
+      </div>
     </div>
 
-
-        <form>
-            <input type="text" placeholder="Add a task">
-            <button type="submit">Add</button>
-        </form>
-
-        <button id="complete-all">Complete All</button>
-
-        <ul id="task-list">
+    <form>
+      <div class="input-container">
+        <div id="date-time-container">
+          <div id="date"></div>
+          <div id="time"></div>
+        </div>
+        <div class="task">
+          <input type="text" id="task-input" placeholder="Enter task" />
+          <button type="submit">Add</button>
+          <br />
+          <button id="complete-all">Complete All</button>
+          <br />
+          <ul id="task-list">
             <!-- Task will be appended here -->
-        </ul>
-        <script src="./list.js"></script>
-        <script src="./back.js"></script>
-        <script src="./menu.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
+          </ul>
+        </div>
+      </div>
+    </form>
 
+    <script src="./list.js"></script>
+    <script src="./back.js"></script>
+    <script src="./menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
 </html>
